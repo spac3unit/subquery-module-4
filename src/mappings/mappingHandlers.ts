@@ -13,7 +13,7 @@ export async function handleStakingRewarded(
   const entity = new StakingReward(
     `${event.block.block.header.number}-${event.idx.toString()}`
   );
-  entity.account = account.toString();
+  entity.accountId = account.toString();
   entity.balance = (newReward as Balance).toBigInt();
   entity.date = event.block.timestamp;
   await entity.save();
