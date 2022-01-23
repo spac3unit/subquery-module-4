@@ -9,5 +9,5 @@ type StakingReward @entity {
 type SumReward @entity {
   id: ID! # AccountId
   totalReward: BigInt!
-  blockheight: Int!
+  blockheight: Int
 }
